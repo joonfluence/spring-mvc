@@ -1,4 +1,4 @@
-package spring.mvc.dalicious.Controller;
+package spring.mvc.dalicious.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
