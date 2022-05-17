@@ -1,16 +1,29 @@
 package spring.mvc.dalicious.service;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import spring.mvc.dalicious.domain.Member;
 import spring.mvc.dalicious.domain.MemoryMemberRepository;
-import spring.mvc.dalicious.repository.MemberRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    private final MemberService memberService = new MemberService();
+    MemberService memberService;
+    MemoryMemberRepository memberRepository;
+
+    @BeforeEach
+    public void beforeEach(){
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+    }
+
+    @AfterEach
+    public void afterEach(){
+        memberRepository.clearStore();
+    }
 
     @Test
     void join() {

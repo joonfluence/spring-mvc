@@ -1,5 +1,6 @@
 package spring.mvc.dalicious.repository;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import spring.mvc.dalicious.domain.Member;
 import spring.mvc.dalicious.domain.MemoryMemberRepository;
@@ -11,6 +12,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MemoryMemberRepositoryTest {
     MemoryMemberRepository repository = new MemoryMemberRepository();
+
+    @AfterEach
+    public void afterEach(){
+        repository.clearStore();
+    }
 
     @Test
     public void save(){

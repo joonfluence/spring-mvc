@@ -1,5 +1,7 @@
 package spring.mvc.dalicious.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import spring.mvc.dalicious.domain.Member;
 import spring.mvc.dalicious.domain.MemoryMemberRepository;
 import spring.mvc.dalicious.repository.MemberRepository;
@@ -11,7 +13,11 @@ public class MemberService {
     /**
      * 회원가입
      */
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
 
     // 회원가입
     public Long join(Member member) {

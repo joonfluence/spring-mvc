@@ -1,5 +1,6 @@
 package spring.mvc.dalicious.domain;
 
+import org.springframework.stereotype.Repository;
 import spring.mvc.dalicious.repository.MemberRepository;
 
 import java.util.*;
@@ -29,5 +30,9 @@ public class MemoryMemberRepository implements MemberRepository {
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
+    }
+
+    public void clearStore(){
+        store.clear();
     }
 }
