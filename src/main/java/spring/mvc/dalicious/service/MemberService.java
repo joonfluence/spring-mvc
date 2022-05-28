@@ -1,9 +1,6 @@
 package spring.mvc.dalicious.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import spring.mvc.dalicious.domain.Member;
-import spring.mvc.dalicious.domain.MemoryMemberRepository;
 import spring.mvc.dalicious.repository.MemberRepository;
 
 import java.util.List;

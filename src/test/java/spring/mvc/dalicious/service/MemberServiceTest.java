@@ -4,7 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import spring.mvc.dalicious.domain.Member;
-import spring.mvc.dalicious.domain.MemoryMemberRepository;
+import spring.mvc.dalicious.repository.MemoryMemberRepository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
