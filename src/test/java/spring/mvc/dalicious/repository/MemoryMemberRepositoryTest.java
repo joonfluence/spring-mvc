@@ -3,7 +3,6 @@ package spring.mvc.dalicious.repository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import spring.mvc.dalicious.domain.Member;
-import spring.mvc.dalicious.domain.MemoryMemberRepository;
 
 import java.util.List;
 

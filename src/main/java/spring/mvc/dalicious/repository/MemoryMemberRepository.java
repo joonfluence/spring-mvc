@@ -1,6 +1,7 @@
-package spring.mvc.dalicious.domain;
+package spring.mvc.dalicious.repository;
 
 import org.springframework.stereotype.Repository;
+import spring.mvc.dalicious.domain.Member;
 import spring.mvc.dalicious.repository.MemberRepository;
 
 import java.util.*;
