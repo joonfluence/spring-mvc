@@ -1,11 +1,13 @@
 package spring.mvc.dalicious.service;
 
+import org.springframework.transaction.annotation.Transactional;
 import spring.mvc.dalicious.domain.Member;
 import spring.mvc.dalicious.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
     /**
      * 회원가입
